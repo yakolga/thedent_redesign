@@ -1,0 +1,130 @@
+//fonts
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 500;
+  src:
+    url("/assets/fonts/Gilroy-Medium.eot") format("opentype"),
+    url("/assets/fonts/Gilroy-Medium.ttf") format("ttf"),
+    url("/assets/fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 600;
+  src:
+    url("/assets/fonts/Gilroy-SemiBold.eot") format("opentype"),
+    url("/assets/fonts/Gilroy-SemiBold.ttf") format("ttf"),
+    url("/assets/fonts/Gilroy-SemiBold.woff") format("woff");
+}
+
+//colors
+$primary-color: #1080E8;
+$dark-text-color: #323232;
+$info-color: #008749;
+$background-primary-light-color: #F0F8FF;
+$light-text-color: #FFFFFF;
+$hover-button-color: #008749;
+
+//media variables
+$tablet: 757px;
+$laptop: 977px;
+
+//container
+.container {
+  margin: 0 auto;
+  max-width: 1324px;
+  padding: 0 10px;
+}
+
+//button
+.btn {
+  font-size: 12px;
+  padding: 15px;
+  border-radius: 35px;
+  color: $light-text-color;
+  background-color: $primary-color;
+  cursor: pointer;
+  transition: .5s background-color;
+  display: block;
+  &:after {
+    font-size: 8px;
+    content: "\E804";
+    font-family: "fontello";
+    margin-left: 10px;
+  }
+  &:hover {
+    background-color: $hover-button-color;
+  }
+}
+
+//awarded element
+.awarded {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+  border-radius: 100%;
+  &__inner {
+    position: relative;
+  }
+  img {
+    width: 27px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 71px;
+    height: 70px;
+    background-image: url("/assets/images/awarded_text_mobile.svg");
+    background-repeat: no-repeat;
+    -webkit-animation: spin 8s linear infinite;
+    -moz-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite;
+  }
+  @media (min-width: $laptop) {
+    width: 155px;
+    height: 155px;
+    img {
+      width: unset;
+    }
+    &:before {
+      width: 139px;
+      height: 139px;
+      background-image: url("/assets/images/awarded_text.svg");
+    }
+  }
+  @-moz-keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-flex {
+  display: flex !important;
+}

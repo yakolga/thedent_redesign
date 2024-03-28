@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Gilroy", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+@import"sections/_assets.scss";
+@import"sections/_header.scss";
+@import"sections/_promo.scss";

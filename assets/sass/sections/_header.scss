@@ -1,0 +1,155 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    @media (min-width: $laptop) {
+      padding-top: 40px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    background: none;
+    border: none;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    i {
+      color: $light-text-color;
+    }
+    @media (min-width: $laptop) {
+      display: none;
+    }
+  }
+
+  &__navigation {
+    @media (max-width: $laptop) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 25px;
+      background-color: rgb(16, 128, 232, .3);
+      height: 100vh;
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      max-width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      li:not(:last-child) {
+        margin-bottom: 17px;
+      }
+      .btn {
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      margin-top: 30px;
+      @media (min-width: $laptop) {
+        margin-top: 0;
+        flex-direction: row;
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    @media (min-width: $laptop) {
+      .header__logo {
+        display: none !important;
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 17px;
+    color: $light-text-color;
+    transition: 0.5s color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__navigation {
+    left: -230px;
+    transition: 0.5s left;
+    &.--active {
+      left: 0;
+    }
+    @media (min-width: $laptop) {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    margin-left: 14px;
+    @media (min-width: $laptop) {
+      margin-left: 50px;
+    }
+  }
+
+  &__logo {
+    width: 40px;
+    @media (min-width: $laptop) {
+      width: 64px;
+      height: 61px;
+    }
+    img {
+      width: 100%;
+    }
+
+    &.--navigation {
+      display: block;
+      width: 40px;
+    }
+  }
+
+  &__burger {
+    width: 17px;
+    height: 13px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    cursor: pointer;
+    span {
+      width: 100%;
+      height: 2px;
+      border-radius: 15px;
+      background-color: $light-text-color;
+      display: block;
+      transition: 0.3s background-color;
+    }
+    @media (min-width: $laptop) {
+      display: none;
+    }
+    &:hover {
+      span {
+        background-color: $primary-color;
+      }
+    }
+  }
+}

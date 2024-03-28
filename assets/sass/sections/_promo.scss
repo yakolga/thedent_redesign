@@ -21,13 +21,13 @@
     content: "";
     position: absolute;
     width: 100%;
-    background-image: url("/assets/images/main_mobile.png");
+    background-image: url("../images/main.png");
     background-size: cover;
     height: 409px;
     top: 0;
     z-index: -2;
     @media (min-width: $tablet) {
-      background-image: url("/assets/images/main.png");
+      background-image: url("../images/main.png");
     }
     @media (min-width: $laptop) {
       height: 840px;

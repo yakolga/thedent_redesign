@@ -3,18 +3,18 @@
   font-family: "Gilroy";
   font-weight: 500;
   src:
-    url("/assets/fonts/Gilroy-Medium.eot") format("opentype"),
-    url("/assets/fonts/Gilroy-Medium.ttf") format("ttf"),
-    url("/assets/fonts/Gilroy-Medium.woff") format("woff");
+    url("../fonts/Gilroy-Medium.eot") format("opentype"),
+    url("../fonts/Gilroy-Medium.ttf") format("ttf"),
+    url("../fonts/Gilroy-Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: "Gilroy";
   font-weight: 600;
   src:
-    url("/assets/fonts/Gilroy-SemiBold.eot") format("opentype"),
-    url("/assets/fonts/Gilroy-SemiBold.ttf") format("ttf"),
-    url("/assets/fonts/Gilroy-SemiBold.woff") format("woff");
+    url("../fonts/Gilroy-SemiBold.eot") format("opentype"),
+    url("../fonts/Gilroy-SemiBold.ttf") format("ttf"),
+    url("../fonts/Gilroy-SemiBold.woff") format("woff");
 }
 
 //colors
@@ -77,7 +77,7 @@ $laptop: 977px;
     position: absolute;
     width: 71px;
     height: 70px;
-    background-image: url("/assets/images/awarded_text_mobile.svg");
+    background-image: url("../images/awarded_text_mobile.svg");
     background-repeat: no-repeat;
     -webkit-animation: spin 8s linear infinite;
     -moz-animation: spin 8s linear infinite;

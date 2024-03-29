@@ -1,0 +1,121 @@
+.doctors {
+  background-color: $background-primary-light-color;
+  padding: 25px 0;
+  @media (min-width: $laptop) {
+    padding: 80px 0;
+  }
+
+  &__heading {
+    font-size: 26px;
+    font-weight: 600;
+    color: $dark-text-color;
+    @media (min-width: $laptop) {
+      font-size: 35px;
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 25px 10px 0;
+    @media (max-width: $laptop) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      margin: 0 -10px;
+      > div:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+    @media (min-width: $laptop) {
+      margin: unset;
+      padding: 40px 0 0 0;
+    }
+  }
+
+  @media (max-width: $laptop) {
+    &__wrapper::-webkit-scrollbar {
+      height: 2px;
+      margin: 0 10px;
+    }
+
+    &__wrapper::-webkit-scrollbar-thumb {
+      background-color: $primary-color;
+      border-radius: 10px;
+    }
+
+    &__wrapper::-webkit-scrollbar-track {
+      background-color: #fff;
+      border-radius: 10px;
+    }
+  }
+
+  &__doctor {
+    position: relative;
+    scroll-snap-align: center;
+    @media (max-width: $tablet) {
+      flex: 0 0 65%;
+      max-width: 65%;
+    }
+    @media (min-width: $tablet) and (max-width: $laptop) {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+    @media (max-width: $laptop) {
+      margin-bottom: 25px;
+    }
+    img {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__experience {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background: $info-color;
+    font-size: 14px;
+    line-height: 17px;
+    color: $light-text-color;
+    border-radius: 100px;
+  }
+
+  &__text {
+    margin-top: 10px;
+    color: $dark-text-color;
+  }
+
+  &__points {
+    margin-top: 10px;
+    padding-left: 22px;
+    color: $dark-text-color;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    right: 0;
+    top: -40px;
+  }
+
+  &__prev {
+    right: 57px !important;
+  }
+
+  .slick-slide {
+    margin: 0 14.5px;
+  }
+
+  .slick-list {
+    margin: 0 -14.5px;
+  }
+}

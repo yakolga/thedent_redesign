@@ -21,18 +21,20 @@
     content: "";
     position: absolute;
     width: 100%;
-    background-image: url("../images/main.png");
+    background-image: url("../images/main.webp");
     background-size: cover;
     height: 409px;
     top: 0;
     z-index: -2;
     @media (min-width: $tablet) {
-      background-image: url("../images/main.png");
+      background-image: url("../images/main.webp");
     }
     @media (min-width: $laptop) {
       height: 840px;
     }
   }
+
+
   &__wrapper {
     padding-top: 88px;
     @media (min-width: $laptop) {

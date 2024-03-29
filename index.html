@@ -6,6 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="assets/fontello/css/fontello.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/slick/slick.css">
 </head>
 <body>
   <header class="header">
@@ -41,7 +42,7 @@
       </div>
     </div>
   </header>
-  <div class="promo">
+  <section class="promo">
     <div class="promo__container container">
       <div class="promo__wrapper">
         <h1 class="promo__heading">Стоматологічна клініка The Dent</h1>
@@ -53,7 +54,253 @@
         <img src="assets/images/logo.svg" alt="Логотип клініки The Dent">
       </div>
     </div>
-  </div>
+  </section>
+  <section class="about">
+    <div class="about__container container">
+      <div class="about__wrapper">
+        <div class="about__text">
+          <h2 class="about__heading">Ласкаво запрошуємо до нашої стоматологічної клініки!</h2>
+          <p class="about__descr">Ми - команда висококваліфікованих фахівців, що працює для забезпечення вашого здоров'я та комфорту. Завдяки розумінню того, наскільки важливо мати здорові зуби і яскраву посмішку, ми пропонуємо широкий спектр послуг для всієї сім'ї.</p>
+          <ul class="about__benefits">
+            <li class="about__benefit">Професійний Підхід</li>
+            <li class="about__benefit">Індивідуальний Підхід</li>
+            <li class="about__benefit">Комфорт та Безпека</li>
+            <li class="about__benefit">Естетичні Рішення</li>
+          </ul>
+        </div>
+        <div class="about__image">
+          <picture>
+            <source srcset="assets/images/about_mobile.webp" media="(max-width: 757px)" />
+            <img src="assets/images/about_us.webp" alt="Лікар лікує зуби пацієнту" />
+          </picture>
+          <div class="about__info">
+            <div class="about__inner">
+              <div class="about__interesting">Цікавий факт!</div>
+              <div class="about__content">Правильна гігієна рота не лише забезпечує здоров'я вашого рота, але й сприяє загальному здоров'ю організму. Запобігання захворюванням ясен і зубів може зменшити ризик серцевих проблем та інших серйозних захворювань.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <div class="services__container container">
+      <h2 class="services__heading">Наші послуги</h2>
+      <div class="services__wrapper">
+        <div class="services__service">
+          <img src="assets/images/terapia.webp" alt="Терапія">
+          <div class="services__text">
+            <span class="services__name">Терапія</span>
+            <p class="services__descr">Наші експерти забезпечують широкий спектр послуг, від лікування карієсу до відновлення зубної емалі.</p>
+          </div>
+        </div>
+        <div class="services__service">
+          <img src="assets/images/chirurgia.webp" alt="Хірургія">
+          <div class="services__text">
+            <span class="services__name">Хірургія</span>
+            <p class="services__descr">Наші експерти забезпечують широкий спектр послуг, від видалення зубів мудрості до імплантації зубних імплантатів.</p>
+          </div>
+        </div>
+        <div class="services__service">
+          <img src="assets/images/chirurgia.webp" alt="Хірургія">
+          <div class="services__text">
+            <span class="services__name">Хірургія</span>
+            <p class="services__descr">Наші експерти забезпечують широкий спектр послуг, від видалення зубів мудрості до імплантації зубних імплантатів.</p>
+          </div>
+        </div>
+        <div class="services__service">
+          <img src="assets/images/ortodontia.webp" alt="Ортодонтія">
+          <div class="services__text">
+            <span class="services__name">Ортодонтія</span>
+            <p class="services__descr">Наша команда фахівців пропонує високоякісні протези та імплантати, розроблені для ідеального відтворення вашого природного усмішки.</p>
+          </div>
+        </div>
+        <div class="services__service">
+          <img src="assets/images/ortodontia.webp" alt="Ортодонтія">
+          <div class="services__text">
+            <span class="services__name">Ортодонтія</span>
+            <p class="services__descr">Наша команда фахівців пропонує високоякісні протези та імплантати, розроблені для ідеального відтворення вашого природного усмішки.</p>
+          </div>
+        </div>
+        <div class="services__service">
+          <img src="assets/images/protezuwannia.webp" alt="Протезування">
+          <div class="services__text">
+            <span class="services__name">Протезування</span>
+            <p class="services__descr">Наша команда фахівців пропонує високоякісні протези та імплантати, розроблені для ідеального відтворення вашого природного усмішки.</p>
+          </div>
+        </div>
+        <div class="services__service">
+          <img src="assets/images/protezuwannia.webp" alt="Протезування">
+          <div class="services__text">
+            <span class="services__name">Протезування</span>
+            <p class="services__descr">Наша команда фахівців пропонує високоякісні протези та імплантати, розроблені для ідеального відтворення вашого природного усмішки.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="doctors">
+    <div class="doctors__container container">
+      <h2 class="doctors__heading">Наші лікарі</h2>
+      <div class="doctors__wrapper">
+        <div class="doctors__doctor">
+          <img src="assets/images/daria.webp" alt="лікар Дар'я Олександрівна">
+          <div class="doctors__experience">досвід 13 років</div>
+          <div class="doctors__text">
+            <span class="doctors__name">Дар'я Олександрівна</span>
+            <ul class="doctors__points">
+              <li class="doctor__point">Головний лікар клініки</li>
+              <li class="doctor__point">лікар - стоматолог ортопед</li>
+              <li class="doctor__point">лікар - стоматолог терапевт</li>
+            </ul>
+          </div>
+        </div>
+        <div class="doctors__doctor">
+          <img src="assets/images/daryna.webp" alt="лікар Дарина Миколаївна">
+          <div class="doctors__experience">досвід 14 років</div>
+          <div class="doctors__text">
+            <span class="doctors__name">Дарина Миколаївна</span>
+            <ul class="doctors__points">
+              <li class="doctor__point">лікар - стоматолог ортодонт</li>
+              <li class="doctor__point">лікар - стоматолог терапевт</li>
+            </ul>
+          </div>
+        </div>
+        <div class="doctors__doctor">
+          <img src="assets/images/dmytro.webp" alt="лікар Дмитро Вікторович">
+          <div class="doctors__experience">досвід 13 років</div>
+          <div class="doctors__text">
+            <span class="doctors__name">Дмитро Вікторович</span>
+            <ul class="doctors__points">
+              <li class="doctor__point">лікар-стоматолог хірург</li>
+              <li class="doctor__point">імплантолог</li>
+            </ul>
+          </div>
+        </div>
+        <div class="doctors__doctor">
+          <img src="assets/images/dmytro.webp" alt="лікар Дмитро Вікторович">
+          <div class="doctors__experience">досвід 13 років</div>
+          <div class="doctors__text">
+            <span class="doctors__name">Дмитро Вікторович</span>
+            <ul class="doctors__points">
+              <li class="doctor__point">лікар-стоматолог хірург</li>
+              <li class="doctor__point">імплантолог</li>
+            </ul>
+          </div>
+        </div>
+        <div class="doctors__doctor">
+          <img src="assets/images/dmytro.webp" alt="лікар Дмитро Вікторович">
+          <div class="doctors__experience">досвід 13 років</div>
+          <div class="doctors__text">
+            <span class="doctors__name">Дмитро Вікторович</span>
+            <ul class="doctors__points">
+              <li class="doctor__point">лікар-стоматолог хірург</li>
+              <li class="doctor__point">імплантолог</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="reviews__container container">
+      <h2 class="reviews__heading">Відгуки</h2>
+      <div class="reviews__wrapper">
+        <div class="reviews__review">
+          <div class="reviews__inner">
+            <p class="reviews__text">Чудова клініка. Зверталась до лікарів різних напрямків і всі сподобались. Сучасний підхід, гарний сервіс. Лікарі ввічливі, як раз з моєю тривожністю це важливо. Детально пояснюють що і чому потрібно лікувати.  З чоловіком вибрали цю клініку як «сімейну»))</p>
+            <div class="reviews__bottom">
+              <div class="reviews__info">
+                <img src="assets/images/google.svg" alt="Google">
+                <div class="reviews__stars">
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                </div>
+              </div>
+              <span class="reviews__name">Маргарита Белах</span>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__review">
+          <div class="reviews__inner">
+            <p class="reviews__text">Чудова клініка, компетентні лікарі. Вже не перший раз звертаюся зі складними проблемами із зубами. Привітні, завжди підлаштуються під розклад та приймуть. Все пояснють і детально розпишуть лікування і вартість. Рекомендую однозначно.</p>
+            <div class="reviews__bottom">
+              <div class="reviews__info">
+                <img src="assets/images/google.svg" alt="Google">
+                <div class="reviews__stars">
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                </div>
+              </div>
+              <span class="reviews__name">Анастасия Гусельникова</span>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__review">
+          <div class="reviews__inner">
+            <p class="reviews__text">Доброго дня! Щиро дякую головному лікарю Дар'ї Олександрівні, хірургу Дмитру   Вікторовичу та всьому колективу прекрасної клініки The Dent за Ваш високий професіоналізм, турботу , увагу до пацієнта, а головне за мою нову красиву посмішку та відновлене здоров'я! Буду відвідувати Вашу клініку та радити своїм рідним, друзям та знайомим.The Dent Ви найкращі! Дякую Вам!</p>
+            <div class="reviews__bottom">
+              <div class="reviews__info">
+                <img src="assets/images/google.svg" alt="Google">
+                <div class="reviews__stars">
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                </div>
+              </div>
+              <span class="reviews__name">Тетяна Олексіївна</span>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__review">
+          <div class="reviews__inner">
+            <p class="reviews__text">Мій найкращий і найбезболісніший досвід лікування стався саме в цій клініці. Тут я відчула повагу до себе як до клієнтки і те, що мої відчуття і бажання мають значення. Тепер я знаю, що похід до стоматолога - не тортури, а щось, що може бути легким і приємним. Я дуже задоволена сервісом та результатом, і щаслива, що колись мені порадили саме цю клініку.</p>
+            <div class="reviews__bottom">
+              <div class="reviews__info">
+                <img src="assets/images/google.svg" alt="Google">
+                <div class="reviews__stars">
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                </div>
+              </div>
+              <span class="reviews__name">Наталья Тищенко</span>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__review">
+          <div class="reviews__inner">
+            <p class="reviews__text">Мій найкращий і найбезболісніший досвід лікування стався саме в цій клініці. Тут я відчула повагу до себе як до клієнтки і те, що мої відчуття і бажання мають значення. Тепер я знаю, що похід до стоматолога - не тортури, а щось, що може бути легким і приємним. Я дуже задоволена сервісом та результатом, і щаслива, що колись мені порадили саме цю клініку.</p>
+            <div class="reviews__bottom">
+              <div class="reviews__info">
+                <img src="assets/images/google.svg" alt="Google">
+                <div class="reviews__stars">
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                  <i class="icon-star-1 reviews__star"></i>
+                </div>
+              </div>
+              <span class="reviews__name">Наталья Тищенко</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/slick/slick.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>

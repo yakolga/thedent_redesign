@@ -73,6 +73,10 @@
 
   &__inner {
     padding: 30px 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__text {

@@ -85,6 +85,11 @@
   &__image {
     margin-top: 20px;
     position: relative;
+    @media (max-width: $tablet) {
+      img {
+        width: 95%;
+      }
+    }
     @media (min-width: $tablet) and (max-width: $laptop) {
       img {
         width: 97%;

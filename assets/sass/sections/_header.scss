@@ -2,6 +2,28 @@
   position: absolute;
   width: 100%;
   z-index: 99;
+
+  &.--fixed {
+    position: fixed;
+    background-image: url('../images/header__bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .header__inner {
+      padding: 10px 0;
+    }
+
+    .header__logo {
+      @media (min-width: $laptop) {
+        width: 40px;
+        height: 37px;
+        img {
+          width: 40px;
+          height: 37px;
+        }
+      }
+    }
+  }
   &__inner {
     display: flex;
     justify-content: space-between;

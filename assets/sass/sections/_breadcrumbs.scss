@@ -1,0 +1,28 @@
+.breadcrumbs {
+  &__inner {
+    display: flex;
+    align-items: center;
+    a:last-child {
+      text-decoration: underline;
+    }
+    i {
+      font-size: 7px;
+      color: $dark-text-color;
+      width: 10px;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-text-color;
+    transition: 0.2s color;
+    padding: 0 5px;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

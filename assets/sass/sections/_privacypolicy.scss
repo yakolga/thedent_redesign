@@ -1,0 +1,30 @@
+.privacypolicy {
+  padding-bottom: 25px;
+  @media (min-width: $laptop) {
+    padding-bottom: 80px;
+  }
+  &__title {
+    font-size: 25px;
+    color: $dark-text-color;
+    margin-bottom: 15px;
+    @media (min-width: $laptop) {
+      font-size: 35px;
+      margin-top: 33px;
+    }
+  }
+
+  p {
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-text-color;
+    @media (min-width: $laptop) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  span {
+    font-weight: 600;
+  }
+}

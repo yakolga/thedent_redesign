@@ -114,4 +114,45 @@
       text-decoration: underline;
     }
   }
+
+  &__end {
+    position: relative;
+    &:after {
+      content: "";
+      background-color: #fff;
+      height: 100%;
+      position: absolute;
+      width: 100vw;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-text-color;
+    margin-top: 10px;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    a:first-child {
+      margin-right: 10px;
+    }
+    i {
+      color: $dark-text-color;
+      transition: 0.2s color;
+      font-size: 16px;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
 }

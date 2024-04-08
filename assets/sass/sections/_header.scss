@@ -3,6 +3,12 @@
   width: 100%;
   z-index: 99;
 
+  &__language {
+    margin-right: auto;
+    color: #fff;
+    padding-left: 15px;
+  }
+
   &.--fixed {
     position: fixed;
     background-image: url('../images/header__bg.webp');

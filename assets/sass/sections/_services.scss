@@ -30,13 +30,32 @@
     }
   }
 
+  &__image {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
   &__service {
+    position: relative;
     img {
       width: 100%;
       max-height: 156px;
       object-fit: cover;
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
+      transition: 0.3s transform;
+    }
+    @media (min-width: $laptop) {
+      cursor: pointer;
+      &:hover {
+        .services__additional {
+          display: block;
+          box-shadow: 8px 24px 24px 0px rgba(131,131,131,.15);
+        }
+
+        img {
+          transform: scale(1.2);
+        }
+      }
     }
   }
 
@@ -51,16 +70,35 @@
 
   &__name {
     font-size: 20px;
-    margin-bottom: 10px;
     color: $dark-text-color;
     font-weight: 600;
     display: block;
+    @media (max-width: $laptop) {
+      margin-bottom: 10px;
+    }
   }
 
   &__descr {
     font-size: 14px;
     line-height: 17px;
     color: $dark-text-color;
+    padding-left: 15px;
+    li:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__additional {
+    @media (min-width: $laptop) {
+      display: none;
+      position: absolute;
+      right: 0;
+      left: 0;
+      background-color: #fff;
+      z-index: 2;
+      padding: 20px 15px;
+      border-radius: 10px;
+    }
   }
 
   &__button {

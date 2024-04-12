@@ -48,18 +48,31 @@ function hideServices() {
       }
     }
 
-    const hiddenServices = document.querySelectorAll('.services__service[data-hidden]');
+    const hiddenServices = document.querySelectorAll('.services__service[data-hidden]'),
+          html = document.querySelector('html');
 
     const showButton = document.createElement('button');
     showButton.classList.add('services__button', 'btn');
     showButton.id = 'show-button';
-    showButton.innerText = 'Більше послуг';
+
+    if (html.getAttribute('lang')  == 'en') {
+      showButton.innerText = 'More services';
+    } else {
+      showButton.innerText = 'Більше послуг';
+    }
     servicesWrapper.after(showButton);
 
     const hideButton = document.createElement('button');
     hideButton.classList.add('services__button', 'btn', 'd-none');
     hideButton.id = 'hide-button';
-    hideButton.innerText = 'Менше послуг';
+
+    if (html.getAttribute('lang')  == 'en') {
+      hideButton.innerText = 'Fewer services';
+    } else {
+      hideButton.innerText = 'Менше послуг';
+    }
+
+    console.log(html);
     servicesWrapper.after(hideButton);
 
     showButton.addEventListener('click', (e) => {

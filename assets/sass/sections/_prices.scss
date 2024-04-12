@@ -21,6 +21,14 @@
 
   &__options {
     display: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    div:first-child {
+      padding-top: 10px;
+    }
+    div:last-child {
+      padding-bottom: 10px;
+    }
   }
 
   &__dropdown {

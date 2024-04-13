@@ -112,4 +112,10 @@ function dropdownActions() {
       });
     }
   });
+
+  document.addEventListener('click', (e) => {
+    if (dropdown.classList.contains('--open') && !e.target.classList.contains('.heading__dropdown') && !e.target.closest('.heading__dropdown')) {
+      dropdown.classList.remove('--open');
+    }
+  })
 }

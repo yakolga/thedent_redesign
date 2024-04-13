@@ -30,14 +30,14 @@ $mail->addAddress('aleksanderkulczycki55@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Данные';
+$mail->Subject = 'Дані';
 $mail->Body    = '
-		Пользователь оставил данные <br> 
-	Имя: ' . $name . ' <br>
-	Фамилия: ' . $surname . '<br>
-	Номер телефона: ' . $phone . ' <br>
+	Користувач залишив дані<br>
+	Ім"я: ' . $name . ' <br>
+	Прізвище: ' . $surname . '<br>
+	Номер телефону: ' . $phone . ' <br>
 	E-mail: ' . $email . ' <br>
-    Сообщение: ' . $question . '';
+	Повідомлення: ' . $question . '';
 
 if(!$mail->send()) {
     return false;

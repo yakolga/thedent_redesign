@@ -1,5 +1,7 @@
 "use strict";
 
+const html = document.querySelector('html');
+
 document.addEventListener('DOMContentLoaded', () => {
   toggleMobileMenu();
   closeMobile();
@@ -9,8 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
   gallerySlider();
   scrollHeader();
   replaceForm();
-  validateForms('#consultation-form');
+  if (html.getAttribute('lang') == 'en') {
+    validateForms('#consultation-form', 'Please enter your name', 'Please enter your surname', 'Please enter your phone number', 'Please enter your E-mail address', 'Please fill in all required fields');
+  } else {
+    validateForms('#consultation-form', "Будь-ласка, введіть своє ім'я", 'Будь-ласка, введіть своє прізвище', 'Будь-ласка, введіть свій номер телефону', 'Будь-ласка, введіть свій адрес E-mail', "Будь-ласка, заповніть всі обов'язкові поля");
+  }
 });
+
+
 
 function toggleMobileMenu() {
   const buttonToggle = document.querySelector('.header__burger'),
@@ -48,8 +56,7 @@ function hideServices() {
       }
     }
 
-    const hiddenServices = document.querySelectorAll('.services__service[data-hidden]'),
-          html = document.querySelector('html');
+    const hiddenServices = document.querySelectorAll('.services__service[data-hidden]');
 
     const showButton = document.createElement('button');
     showButton.classList.add('services__button', 'btn');
@@ -72,7 +79,6 @@ function hideServices() {
       hideButton.innerText = 'Менше послуг';
     }
 
-    console.log(html);
     servicesWrapper.after(hideButton);
 
     showButton.addEventListener('click', (e) => {
@@ -176,7 +182,7 @@ function replaceForm() {
   }
 }
 
-function validateForms(form) {
+function validateForms(form, name, surname, phone, email, privacypolicy) {
   $(form).validate({
   rules: {
     name: {
@@ -195,14 +201,44 @@ function validateForms(form) {
     privacypolicy: "required"
   },
   messages: {
-    name: "Будь-ласка, введіть своє ім'я",
-    surname: "Будь-ласка, введіть своє прізвище",
-    phone: "Будь-ласка, введіть свій номер телефону",
-    email: "Будь-ласка, введіть свій адрес E-mail",
-    privacypolicy: "Будь-ласка, заповніть всі обов'язкові поля"
+    name: name,
+    surname: surname,
+    phone: phone,
+    email: email,
+    privacypolicy: privacypolicy
   }
 });
 };
+
+if (html == 'en') {
+  function validateForms(form) {
+    $(form).validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      phone: "required",
+      surname: {
+        required: true,
+        minlength: 2
+      },
+      email: {
+          required: true,
+          email: true
+      },
+      privacypolicy: "required"
+    },
+    messages: {
+      name: "Будь-ласка, введіть своє ім'я",
+      surname: "Будь-ласка, введіть своє прізвище",
+      phone: "Будь-ласка, введіть свій номер телефону",
+      email: "Будь-ласка, введіть свій адрес E-mail",
+      privacypolicy: "Будь-ласка, заповніть всі обов'язкові поля"
+    }
+  });
+  };
+}
 
 $('input[name=phone]').mask("+380 (99) 999-99-99");
 
@@ -213,14 +249,20 @@ $('form').submit(function(e) {
     return;
   }
 
+  var $form = $(this);
   $.ajax({
     type: "POST",
-    url: "mailer/smart.php",
-    data: $(this).serialize()
+    url: "assets/mailer/smart.php",
+    data: $form.serialize()
   }).done(function() {
-    $(this).find("input").val("");
+    $form.find("input").val("");
     $('.consultation__success').fadeIn('slow');
-    $('form').trigger('reset')
+
+    setTimeout(function() {
+      $('.consultation__success').fadeOut('slow');
+    }, 10000);
+
+    $form.trigger('reset');
   });
   return false;
 });

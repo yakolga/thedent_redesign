@@ -5,11 +5,11 @@ const prices = {
       "services": [
         {
           "name": "Consultation with the head physician",
-          "price": "550 UAH"
+          "price": "650 UAH"
         },
         {
           "name": "Extended CT consultation: determination of treatment priority, treatment plan with cost estimation",
-          "price": "650 UAH"
+          "price": "750 UAH"
         },
         {
           "name": "Consultation with a therapeutic dentist",
@@ -17,7 +17,7 @@ const prices = {
         },
         {
           "name": "Consultation with a surgeon",
-          "price": "550 UAH"
+          "price": "650 UAH"
         },
         {
           "name": "Primary consultation with an orthodontist",
@@ -42,15 +42,15 @@ const prices = {
       "services": [
         {
           "name": "Removal of dental deposits, teeth cleaning - 2 jaws / 1 severity level / (Ultrasonic supragingival teeth cleaning and air-abrasive polishing (Airflow with glycine))",
-          "price": "1200 UAH"
+          "price": "1700 UAH"
         },
         {
           "name": "Removal of dental deposits, teeth cleaning - 2 jaws / 2 severity level / (Ultrasonic supragingival teeth cleaning and air-abrasive polishing (Airflow with glycine))",
-          "price": "1500 UAH"
+          "price": "2000 UAH"
         },
         {
           "name": "Removal of dental deposits, teeth cleaning - 2 jaws / 3 severity level / (Ultrasonic supragingival teeth cleaning and air-abrasive polishing (Airflow with glycine))",
-          "price": "2000 UAH"
+          "price": "2500 UAH"
         },
         {
           "name": "Ultrasonic teeth cleaning, 2 jaws",
@@ -67,27 +67,44 @@ const prices = {
       ]
     },
     {
+      "name": "Periodontal Treatment",
+      "services": [
+        {
+          "name": "Diagnosis of Periodontal Pockets",
+          "price": "600 UAH"
+        },
+        {
+          "name": "Closed Curettage of One Jaw",
+          "price": "4500 UAH"
+        },
+        {
+          "name": "Supportive Periodontal Therapy",
+          "price": "3500 UAH"
+        },
+        {
+          "name": "Hyaluronic Acid Injection into the Gums",
+          "price": "3500 UAH"
+        }
+      ]
+    },
+    {
       "name": "Therapeutic dentistry",
       "services": [
         {
-          "name": "Photopolymer tooth restoration",
-          "price": "from 1500 UAH to 2500 UAH"
+          "name": "Treatment of caries with minor tooth damage",
+          "price": "2500 UAH"
         },
         {
-          "name": "Anesthesia",
-          "price": "250 UAH"
+          "name": "Treatment of caries in the lateral group of teeth",
+          "price": "3000 UAH"
         },
         {
-          "name": "Therapeutic lining",
+          "name": "Artistic restoration of front teeth with nanocomposite",
+          "price": "3000 - 4500 UAH"
+        },
+        {
+          "name": "Application of rubber dam, Optragate",
           "price": "300 UAH"
-        },
-        {
-          "name": "Rubber dam application, Optragate",
-          "price": "250 UAH"
-        },
-        {
-          "name": "Restoration of frontal teeth (artistic restoration)",
-          "price": "2500 - 3000 UAH"
         }
       ]
     },
@@ -96,15 +113,15 @@ const prices = {
       "services": [
         {
           "name": "Primary treatment of 1 root canal under microscope",
-          "price": "1500 UAH"
-        },
-        {
-          "name": "Retreatment of 1 root canal under microscope",
           "price": "1700 UAH"
         },
         {
+          "name": "Retreatment of 1 root canal under microscope",
+          "price": "1800 UAH"
+        },
+        {
           "name": "First aid (cavity opening + antiseptic rinsing + tooth wall restoration + calcium application)",
-          "price": "2500 UAH"
+          "price": "2600 UAH"
         },
         {
           "name": "Instrument fragment removal",
@@ -141,7 +158,7 @@ const prices = {
         },
         {
           "name": "Teeth fluoridation (pediatric)",
-          "price": "450 UAH"
+          "price": "600 UAH"
         },
         {
           "name": "Professional cleaning of milk teeth with paste + brush",
@@ -167,7 +184,7 @@ const prices = {
         },
         {
           "name": "Anesthesia (conduction, infiltration)",
-          "price": "250 UAH"
+          "price": "300 UAH"
         }
       ]
     },
@@ -176,7 +193,7 @@ const prices = {
       "services": [
         {
           "name": "X-ray",
-          "price": "250 UAH"
+          "price": "300 UAH"
         },
         {
           "name": "3D examination, upper and lower jaws in occlusion HD",
@@ -197,27 +214,27 @@ const prices = {
         },
         {
           "name": "Metal-ceramic crown",
-          "price": "6000 UAH"
+          "price": "8700 UAH"
         },
         {
           "name": "Anatomical zirconia crown",
-          "price": "7800 UAH"
+          "price": "10 000 UAH"
         },
         {
           "name": "Zirconia-ceramic crown",
-          "price": "8800 UAH"
+          "price": "13 000 UAH"
         },
         {
           "name": "Ceramic crown 'Emax press'",
-          "price": "10,000 UAH"
+          "price": "13 000 UAH"
         },
         {
-        "name": "Ceramic veneer 'Emax press'",
-        "price": "from 15,000 UAH"
+          "name": "Ceramic veneer 'Emax press'",
+          "price": "from 15 000 UAH"
         },
         {
           "name": "Ceramic inlay/onlay/overlay 'Emax press'",
-          "price": "10,000 UAH"
+          "price": "13 000 UAH"
         },
         {
           "name": "Temporary PMMA crown, laboratory fabrication (temporary)",
@@ -225,7 +242,7 @@ const prices = {
         },
         {
           "name": "Reconstruction of tooth stump with fiberglass post for crown",
-          "price": "2700 UAH"
+          "price": "3300 UAH"
         },
         {
           "name": "Cast metal stump insert",
@@ -319,16 +336,20 @@ const prices = {
         },
         {
           "name": "Atypical tooth extraction (complex)",
-          "price": "from 2000 UAH to 5500 UAH"
+          "price": "from 2000 UAH to 5700 UAH"
         },
         {
           "name": "Wisdom tooth extraction (typical)",
-          "price": "from 1500 UAH to 2000 UAH"
+          "price": "from 1500 UAH to 2700 UAH"
         },
         {
           "name": "Hemostatic sponge application",
-          "price": "150 UAH"
-        }
+          "price": "250 UAH"
+        },
+        {
+          "name": "Stitching",
+          "price": "350 UAH"
+        },
       ]
     },
     {
@@ -360,11 +381,11 @@ const prices = {
         },
         {
           "name": "Bracket wire replacement",
-          "price": "from 750 UAH to 1100 UAH"
+          "price": "1200 UAH"
         },
         {
           "name": "Bracket system correction, ligature replacement (1 jaw)",
-          "price": "650 UAH"
+          "price": "700 UAH"
         },
         {
           "name": "Additional orthodontic appliance",
@@ -401,7 +422,7 @@ const prices = {
       "services": [
         {
           "name": "Hardware teeth whitening with Magic Smile system",
-          "price": "3500 UAH"
+          "price": "3700 UAH"
         }
       ]
     }

@@ -39,14 +39,13 @@
   <link rel="stylesheet" href="assets/fontello/css/fontello.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198298360-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-198298360-1');
-  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MSG793PX');</script>
+  <!-- End Google Tag Manager -->
 
   <script type="application/ld+json">
     {
@@ -818,7 +817,7 @@
                   "@type": "Service",
                   "name": "Металева самолігуюча брекет-система (1 щелепа)"
                 },
-                "price": "17500 - 20000",
+                "price": "17500 - 21500",
                 "priceCurrency": "UAH"
               },
               {
@@ -961,6 +960,11 @@
   </script>
 </head>
 <body class="sub-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSG793PX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header class="header --fixed">
     <div class="header__container container">
       <div class="header__inner">
@@ -992,7 +996,9 @@
             <span></span>
             <span></span>
           </button>
-          <a class="header__btn btn" href="index.html#consultation">Записатись на прийом</a>
+          <div class="header__buttons">
+            <a class="header__btn btn" href="#consultation">Записатись на прийом</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1103,6 +1109,10 @@
       </div>
     </div>
   </footer>
+  <div class="fixed-buttons">
+    <a href="tel:+38(068)7779008" class="fixed-buttons__phone"><img src="assets/images/phone.svg" alt=""/></a>
+    <a href="#consultation" class="fixed-buttons__form">Записатись на прийом</a>
+  </div>
   <script src="assets/js/prices_obj.js"></script>
   <script src="assets/js/prices.js"></script>
 </body>

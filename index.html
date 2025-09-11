@@ -41,16 +41,14 @@
   <link rel="stylesheet" href="assets/fontello/css/fontello.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
   <link rel="stylesheet" href="assets/slick/slick.css">
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198298360-1">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-198298360-1');
-  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MSG793PX');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -360,6 +358,10 @@
   </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSG793PX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="header">
     <div class="header__container container">
       <div class="header__inner">
@@ -391,7 +393,9 @@
             <span></span>
             <span></span>
           </button>
-          <a class="header__btn btn" href="#consultation">Записатись на прийом</a>
+          <div class="header__buttons">
+            <a class="header__btn btn" href="#consultation">Записатись на прийом</a>
+          </div>
         </div>
       </div>
     </div>
@@ -944,6 +948,10 @@
       </div>
     </div>
   </footer>
+  <div class="fixed-buttons">
+    <a href="tel:+38(068)7779008" class="fixed-buttons__phone"><img src="assets/images/phone.svg" alt=""/></a>
+    <a href="#consultation" class="fixed-buttons__form">Записатись на прийом</a>
+  </div>
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/jquery.validate.min.js"></script>
   <script src="assets/js/jquery.maskedinput.min.js"></script>

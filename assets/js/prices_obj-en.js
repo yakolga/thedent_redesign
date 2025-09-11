@@ -361,7 +361,7 @@ const prices = {
         },
         {
           "name": "Self-ligating metal braces (1 jaw)",
-          "price": "from 17500 UAH to 20000 UAH"
+          "price": "from 17500 UAH to 21500 UAH"
         },
         {
           "name": "Ceramic braces (1 jaw)",

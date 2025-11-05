@@ -55,7 +55,7 @@ const prices = {
         },
         {
           "name": "Removal of dental plaque and tartar, teeth cleaning – 2 jaws / Level 2 severity / (Ultrasonic supragingival cleaning and air-abrasive polishing (Airflow with glycine))",
-          "price": "2000 UAH"
+          "price": "2300 UAH"
         },
         {
           "name": "Removal of dental plaque and tartar, teeth cleaning – 2 jaws / Level 3 severity / (Ultrasonic supragingival cleaning and air-abrasive polishing (Airflow with glycine))",

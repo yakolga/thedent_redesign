@@ -19,46 +19,54 @@
     }
   }
 
-  &__options {
-    display: none;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    div:first-child {
-      padding-top: 10px;
-    }
-    div:last-child {
-      padding-bottom: 10px;
-    }
-  }
-
   &__dropdown {
-    border: none;
     position: relative;
-    font-size: 14px;
-    line-height: 17px;
-    color: $dark-text-color;
-    padding: 16px 20px;
-    border-radius: 10px;
-    cursor: pointer;
     margin-bottom: 25px;
-    -webkit-box-shadow: 0px 8px 24px 0px rgba(131, 131, 131, 0.25);
-    -moz-box-shadow: 0px 8px 24px 0px rgba(131, 131, 131, 0.25);
-    box-shadow: 0px 8px 24px 0px rgba(131, 131, 131, 0.25);
+    padding: 16px 20px;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: $dark-text-color;
+    background: #fff;
+    cursor: pointer;
+    box-shadow:
+      0 8px 24px rgba(131, 131, 131, 0.14),
+      0 2px 8px rgba(131, 131, 131, 0.08);
+
+    transition:
+      border-radius 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      box-shadow:
+        0 12px 30px rgba(131, 131, 131, 0.18),
+        0 4px 12px rgba(131, 131, 131, 0.1);
+    }
+
     &:after {
       content: '\E80B';
       font-family: fontello;
       position: absolute;
-      right: 10px;
-      font-size: 10px;
-      color: $dark-text-color;
+      right: 18px;
       top: 50%;
-      transform: rotate(90deg) translate(-50%, 0);
-      width: 20px;
-      height: 20px;
+      width: 28px;
+      height: 28px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 11px;
+      color: $primary-color;
+      background: rgba($primary-color, 0.08);
+      transform: translateY(-50%) rotate(90deg);
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
     }
+
     @media (min-width: $laptop) {
       width: 434px;
       margin-bottom: 0;
@@ -67,43 +75,88 @@
     &.--open {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      .heading__options {
-        display: block;
-      }
 
       &:after {
-        transform: rotate(-90deg) translate(50%, 0);
+        transform: translateY(-50%) rotate(-90deg);
+        background: rgba($primary-color, 0.14);
       }
-    }
-  }
 
-  &__options {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background-color: #fff;
-    z-index: 1;
-    -webkit-box-shadow: 0px 8px 24px 0px rgba(131, 131, 131, 0.25);
-    -moz-box-shadow: 0px 8px 24px 0px rgba(131, 131, 131, 0.25);
-    box-shadow: 0px 8px 24px 0px rgba(131, 131, 131, 0.25);
-  }
-
-  &__option {
-    padding: 5px 20px;
-    transition: 0.2s background-color;
-    cursor: pointer;
-    &:hover {
-      background-color: $background-primary-light-color;
-    }
-    &.--current {
-      background-color: $background-primary-light-color;
+      .heading__options {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
     }
   }
 
   &__active {
-    padding-right: 15px;
     display: block;
+    padding-right: 42px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__options {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    right: 0;
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #fff;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    box-shadow:
+      0 16px 40px rgba(131, 131, 131, 0.16),
+      0 4px 12px rgba(131, 131, 131, 0.08);
+
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($primary-color, 0.3);
+      border-radius: 20px;
+    }
+  }
+
+  &__option {
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.45;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      background-color: $background-primary-light-color;
+      color: $primary-color;
+    }
+
+    &.--current {
+      background-color: rgba($primary-color, 0.12);
+      color: $primary-color;
+      font-weight: 600;
+    }
   }
 }
 

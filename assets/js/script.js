@@ -11,14 +11,27 @@ document.addEventListener('DOMContentLoaded', () => {
   gallerySlider();
   scrollHeader();
   replaceForm();
+  setActualYear();
   if (html.getAttribute('lang') == 'en') {
-    validateForms('#consultation-form', 'Please enter your name', 'Please enter your surname', 'Please enter your phone number', 'Please enter your E-mail address', 'Please fill in all required fields');
+    validateForms('#consultation-form', 'Please enter your name', 'Please enter your surname', 'Please enter your phone number', 'Please enter your E-mail address', 'Please fill in all required fields', "Please enter a valid phone number");
   } else {
-    validateForms('#consultation-form', "Будь-ласка, введіть своє ім'я", 'Будь-ласка, введіть своє прізвище', 'Будь-ласка, введіть свій номер телефону', 'Будь-ласка, введіть свій адрес E-mail', "Будь-ласка, заповніть всі обов'язкові поля");
+    validateForms('#consultation-form', "Будь-ласка, введіть своє ім'я", 'Будь-ласка, введіть своє прізвище', 'Будь-ласка, введіть свій номер телефону', 'Будь-ласка, введіть свій адрес E-mail', "Будь-ласка, заповніть всі обов'язкові поля", "Будь-ласка, введіть коректний номер телефону");
   }
 });
 
-
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 100);
+    }
+  }
+});
 
 function toggleMobileMenu() {
   const buttonToggle = document.querySelector('.header__burger'),
@@ -182,65 +195,69 @@ function replaceForm() {
   }
 }
 
-function validateForms(form, name, surname, phone, email, privacypolicy) {
-  $(form).validate({
-  rules: {
-    name: {
-      required: true,
-      minlength: 2
-    },
-    phone: "required",
-    surname: {
-      required: true,
-      minlength: 2
-    },
-    email: {
-        required: true,
-        email: true
-    },
-    privacypolicy: "required"
-  },
-  messages: {
-    name: name,
-    surname: surname,
-    phone: phone,
-    email: email,
-    privacypolicy: privacypolicy
-  }
-});
-};
+function validateForms(form, name, surname, phone, email, privacypolicy, uaPhone) {
 
-if (html == 'en') {
-  function validateForms(form) {
-    $(form).validate({
+  $.validator.addMethod(
+    "uaPhone",
+    function(value, element) {
+      return /^\+380\s\((39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\)\s\d{3}-\d{2}-\d{2}$/.test(value);
+    },
+    uaPhone
+  );
+
+  const validator = $(form).validate({
+
     rules: {
       name: {
         required: true,
         minlength: 2
       },
-      phone: "required",
+
+      phone: {
+        required: true,
+        uaPhone: true
+      },
+
       surname: {
         required: true,
         minlength: 2
       },
+
       email: {
-          required: true,
-          email: true
+        required: true,
+        email: true
       },
-      privacypolicy: "required"
+
+      privacypolicy: {
+        required: true
+      }
     },
+
     messages: {
-      name: "Будь-ласка, введіть своє ім'я",
-      surname: "Будь-ласка, введіть своє прізвище",
-      phone: "Будь-ласка, введіть свій номер телефону",
-      email: "Будь-ласка, введіть свій адрес E-mail",
-      privacypolicy: "Будь-ласка, заповніть всі обов'язкові поля"
+      name: name,
+
+      surname: surname,
+
+      phone: {
+        required: phone,
+        uaPhone: uaPhone
+      },
+
+      email: email,
+
+      privacypolicy: privacypolicy
     }
   });
-  };
+
+  $('input[name="phone"]').mask("+380 (99) 999-99-99")
+    .on('keyup blur', function() {
+      validator.element(this);
+    });
 }
 
-$('input[name=phone]').mask("+380 (99) 999-99-99");
+function setActualYear() {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+}
 
 $('form').submit(function(e) {
   e.preventDefault();

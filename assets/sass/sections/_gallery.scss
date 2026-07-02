@@ -29,7 +29,6 @@
   &__gallery {
     @media (min-width: $tablet) {
       width: 51%;
-      background-color: #fff;
     }
   }
 
@@ -53,6 +52,12 @@
     .slick-slide {
       margin: 0 5px;
       cursor: pointer;
+    }
+  }
+
+  .slick-slide {
+    img {
+      border-radius: 10px;
     }
   }
 

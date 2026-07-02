@@ -177,7 +177,7 @@ const prices = {
         },
         {
           "name": "Anesthesia (conduction, infiltration)",
-          "price": "350 UAH"
+          "price": "400 UAH"
         }
       ]
     },
@@ -186,7 +186,7 @@ const prices = {
       "services": [
         {
           "name": "X-ray",
-          "price": "350 UAH"
+          "price": "400 UAH"
         },
         {
           "name": "3D examination, upper and lower jaws in occlusion HD",
